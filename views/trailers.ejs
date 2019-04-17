@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div class="allTrailers">
+    <ul>
+        <% trailers.forEach(trailer => { %>
+            <div>
+                <li><h3><%= trailer.kind %></h3></li>
+                <li><img src="<%=trailer.img %>" alt=""></li>
+            </div>
+        <% }) %>
+    </ul>
+</div>
+
+<% include partials/footer %>
