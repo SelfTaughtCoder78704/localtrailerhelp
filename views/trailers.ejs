@@ -1,14 +1,26 @@
 <% include partials/header %>
-<a href="/trailers/new" class="btn btn-primary">Add New Trailer</a>
-<div class="allTrailers">
-    <ul>
-        <% trailers.forEach(trailer => { %>
-            <div>
-                <li><h3><%= trailer.kind %></h3></li>
-                <li><img class="img-fluid" src="<%=trailer.img %>" alt="trailer image"></li>
-            </div>
-        <% }) %>
-    </ul>
-</div>
 
+<header class="jumbotron text-center">
+    <h1>All Trailers</h1>
+    <a href="/trailers/new" class="btn btn-primary">Add New Trailer</a>
+</header>
+
+<div class="container">
+<div class="allTrailers row">
+  
+        
+        <% trailers.forEach(trailer => { %>
+            <div class="col-sm-12 col-md-4">
+            
+                    <img class="img-fluid" src="<%= trailer.img %>" class="card-img-top" alt="...">
+                   
+                      <p class="card-text"><%= trailer.kind %></p>
+                    
+            </div>
+ 
+        <% }) %>
+   
+</div>
+</div>
 <% include partials/footer %>
+

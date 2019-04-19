@@ -1,13 +1,30 @@
 body {
     margin: 0; 
     padding: 0;
+    color: white;
+    background: rgb(44, 40, 40);
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar {
-    background: rgb(40,60,80)!important;
-    padding: 20px;
 
+.navbar {
+    background: rgb(30, 43, 56)!important;
+    padding: 20px;
+    
+}
+.jumbotron{
+    color: rgb(40,60,80);
+}
+.col-sm-12, .col-md-4 {
+    
+    padding: 1%;
+    color: rgb(40,60,80);
+    border-radius: 5px;
+    
+}
+
+.img-fluid{
+    border-radius: 5px;
 }
 
 .navbar-brand{
@@ -25,41 +42,21 @@ body {
     background-color: white !important;
 }
 
-.allTrailers{
-    margin-top: 20px;
-}
-.allTrailers ul {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    background: rgb(40,60,80);
-    padding: 20px;
+.row {
+    padding: 0;
+    margin: 0;
+    background: whitesmoke;
     border-radius: 5px;
-    grid-gap: 1em;
-    text-align: center;
-    list-style:none;
 }
 
-.allTrailers div{
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 5px;
-}
-.allTrailers img{
-    width: 100%;
-    
-}
-
-.homeDiv {
-    width: 80%;
-    font-family: 'Montserrat', sans-serif;
+/* .homeDiv {
     background: rgb(40,60,80);
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
+    border-radius: 0;
+    padding: 20px 0 ;
     color: white;
-}
+    
+} */
 
 .btn {
     background: rgb(40,60,80);
@@ -77,4 +74,7 @@ body {
     color: white;
     border: 2px solid white;
 }
+
+
+
 
