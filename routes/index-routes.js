@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.render('home', {title: 'TrailerFinder | Home'})
+    res.render('home', {title: 'LTH | Home'})
 })
 
 module.exports = router

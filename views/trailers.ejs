@@ -1,11 +1,11 @@
 <% include partials/header %>
-
+<a href="/trailers/new" class="btn btn-primary">Add New Trailer</a>
 <div class="allTrailers">
     <ul>
         <% trailers.forEach(trailer => { %>
             <div>
                 <li><h3><%= trailer.kind %></h3></li>
-                <li><img src="<%=trailer.img %>" alt=""></li>
+                <li><img class="img-fluid" src="<%=trailer.img %>" alt="trailer image"></li>
             </div>
         <% }) %>
     </ul>
