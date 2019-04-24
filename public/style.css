@@ -1,26 +1,62 @@
+*{
+    transition: 1s;
+}
 body {
     margin: 0; 
     padding: 0;
     color: white;
-    background: rgb(44, 40, 40);
+    background: #30B0B8;
     font-family: 'Montserrat', sans-serif;
 }
 
 
 .navbar {
-    background: rgb(30, 43, 56)!important;
-    padding: 20px;
+    background: #30B0B8 !important;
+    
     
 }
 .jumbotron{
-    color: rgb(40,60,80);
+    color: #30B0B8;
+    border-radius: 0;
 }
 .col-sm-12, .col-md-4 {
     
     padding: 1%;
-    color: rgb(40,60,80);
+    color: #30B0B8;
     border-radius: 5px;
     
+}
+
+#extraInfo{
+    margin-top: 40px;
+
+}
+
+#extraInfo .fas{
+    color: #30B0B8;
+    font-size: 8em;
+    transition: 0.6s;
+}
+
+#extraInfo .fas:hover{
+    color: #B83830; 
+   
+}
+
+#addForm {
+    width: 30%;
+    background: #B83830;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#searchBtn {
+    background: #B83830; 
+    color:white;
+}
+#searchBtn:hover{
+    background: white;
+    color: black;
 }
 
 .img-fluid{
@@ -49,17 +85,15 @@ body {
     border-radius: 5px;
 }
 
-/* .homeDiv {
-    background: rgb(40,60,80);
-    margin-top: 10px;
-    border-radius: 0;
-    padding: 20px 0 ;
-    color: white;
-    
-} */
+.homeDiv {
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+  
+}
 
 .btn {
-    background: rgb(40,60,80);
+    background: #30B0B8;
     border-radius: 5px;
     padding: 10px;
     text-decoration: none;
@@ -70,11 +104,44 @@ body {
 }
 
 .btn:hover{
-    background: rgb(80, 40, 71);
+    background: #B83830; 
     color: white;
     border: 2px solid white;
 }
 
+#why{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 1em;
+}
 
+.allTrailers img{
+    width:300px;
+    height: 200px;
+}
 
+form .first{
+    padding-left: 0;
+}
 
+@media screen and (max-width:768px){
+    #extraInfo .fas{
+        font-size: 4em;
+        
+    }
+    #extraInfo h3{
+        font-size: 1em;
+    }
+    #extraInfo{
+        margin-top: 20px;
+    }
+    .allTrailers img{
+        width: 100%;
+       
+    }
+    #addForm {
+        width: 100%;
+        
+    }
+    
+}
