@@ -11,7 +11,7 @@
         
         <% trailers.forEach(trailer => { %>
             <div class="col-sm-12 col-md-4 text-center">
-            
+                <a class="btn" href="trailers/<%= trailer._id %>">Check it out</a>
                     <img class="img-fluid" src="<%= trailer.img %>" class="card-img-top" alt="...">
                    
                       <p class="caption"><%= trailer.kind %></p>

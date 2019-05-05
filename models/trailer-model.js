@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const trailerSchema = new Schema({
     kind: String,
-    img: String
+    img: String,
+    description: String
 });
 
 const Trailer = mongoose.model('Trailer', trailerSchema)
