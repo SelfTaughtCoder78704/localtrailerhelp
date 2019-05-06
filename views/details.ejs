@@ -4,5 +4,17 @@
     <h1><%= trailers.kind %></h1>
     <img src="<%= trailers.img %>" alt="">
     <p>Trailer</p>
+    
+</div>
+<div class="reviews container text-center">
+    <h3>REVIEWS:</h3>
+    <ul class="list-group">
+    <% trailers.reviews.forEach(review => {  %>
+        <li class="list-group-item"><p><strong>User: <%= review.author %></strong> </p>
+        <p>Rating: <%= review.stars %>  Stars</p>
+        <p>Comment: <%= review.comment %></p></li> 
+    <% })%>
+    <button class="btn btn-primary">Add Review</button>
+    </ul>
 </div>
 <% include partials/footer %>

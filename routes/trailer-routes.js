@@ -37,7 +37,7 @@ router.get('/new', (req, res) => {
 // individual trailer (AKA SHOW ROUTE)
 router.get('/:id', (req, res) => {
     
-    Trailer.findById(req.params.id, (err, foundTrailer)=> {
+    Trailer.findById(req.params.id).populate('reviews').exec((err, foundTrailer)=> {
         if(err){
             console.log(err)
         }else{

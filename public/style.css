@@ -124,6 +124,16 @@ form .first{
     padding-left: 0;
 }
 
+.reviews{
+    background: grey;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.reviews li {
+    color: #B83830;
+}
+
 @media screen and (max-width:768px){
     #extraInfo .fas{
         font-size: 4em;

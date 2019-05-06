@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index-routes')
 const trailerRouter = require('./routes/trailer-routes')
+const seed = require('./seeds')
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: true}))
@@ -20,6 +21,8 @@ app.use('/trailers', trailerRouter)
 mongoose.connect('mongodb://localhost:27017/trailer_app',{useNewUrlParser: true},() => {
     console.log('Connected to MONGO')
 });
+
+seed()
 
 const PORT = process.env.PORT || 3000
 
