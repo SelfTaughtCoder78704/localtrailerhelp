@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>Add A Review to <%= trailer.kind.toUpperCase() %></h1>
+<div class="jumbotron" id="review-form">
+    <form class="form-group"action="/trailers/<%= trailer._id %>/reviews" method="POST">
+        <input class="form-control" type="number"  name="reviews[stars]" placeholder="Star Rating">
+        <textarea class="form-control" name="reviews[comment]" id="" cols="30" rows="10"></textarea>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<% include partials/footer %>

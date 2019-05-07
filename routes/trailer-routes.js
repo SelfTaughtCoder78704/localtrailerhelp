@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Trailer = require('../models/trailer-model')
-
+const Review = require('../models/review')
 
 //get all trailers (AKA INDEX ROUTE)
 router.get('/', (req, res) => {
@@ -47,5 +47,35 @@ router.get('/:id', (req, res) => {
        
     })
 })
+
+router.get('/:id/reviews/new', (req, res) => {
+    Trailer.findById(req.params.id, (err, trailer) => {
+        if(err){
+            console.log(err)
+        }else{
+            res.render('new-review', {title: 'Reviews', trailer: trailer})
+        }
+    })
+    
+})
+
+router.post('/:id/reviews', (req, res) => {
+    Trailer.findById(req.params.id, (err, trailer) => {
+        if(err){
+            console.log(err)
+        }else{
+             Review.create(req.body.reviews, (err, review) =>{
+                 if(err) {
+                     console.log(err)
+                 }else{
+                     trailer.reviews.push(review)
+                     trailer.save()
+                     res.redirect('/trailers/' + trailer._id)
+                 }
+             })
+        }
+    })
+})
+
 
 module.exports = router

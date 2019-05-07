@@ -14,7 +14,7 @@
         <p>Rating: <%= review.stars %>  Stars</p>
         <p>Comment: <%= review.comment %></p></li> 
     <% })%>
-    <button class="btn btn-primary">Add Review</button>
+    <a href="/trailers/<%= trailers._id %>/reviews/new" class="btn btn-primary">Add Review</a>
     </ul>
 </div>
 <% include partials/footer %>
