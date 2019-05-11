@@ -42,7 +42,6 @@ function seedDB(){
                         //create a Review
                         Review.create(
                             {
-                                stars: 5,
                                 author: "Homer",
                                 comment: "BANG BANG BANG"
                             }, function(err, review){

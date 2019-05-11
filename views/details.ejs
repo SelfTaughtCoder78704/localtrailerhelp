@@ -1,20 +1,42 @@
 <% include partials/header %>
 
-<div class="container text-center">
-    <h1><%= trailers.kind %></h1>
-    <img src="<%= trailers.img %>" alt="">
-    <p>Trailer</p>
-    
+<div class="container detailGrid">
+    <div class="categories row">
+        <div class="col-md-3">
+            <p class="lead">Local Trailer Help</p>
+            <div class="list-group">
+                <div class="list-group-item active">Info 1</div>
+                <div class="list-group-item">Info 2</div>
+                <div class="list-group-item">Info 3</div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <img class="img-fluid card-img-top" src="<%= trailers.img %>" alt="">
+                <div class="card-body">
+                    <p class="card-text float-right">$75 up to 3 hours</p>
+                    <h5 class="card-title"><a href=""><%= trailers.kind %></a></h5>
+                    
+                    <p class="card-text"><%= trailers.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+            <div class="col-md-9">
+                
+                <div style="margin-top: 10px" class="jumbotron">
+                    <a href="/trailers/<%= trailers._id %>/reviews/new" class="btn btn-success float-right">Add Review</a>
+                    <% trailers.reviews.forEach(review => {  %>
+                        <p><strong>User: <%= review.author %></strong> </p>
+                                
+                        <p>Comment: <%= review.comment %></p>
+                    <% })%>     
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="reviews container text-center">
-    <h3>REVIEWS:</h3>
-    <ul class="list-group">
-    <% trailers.reviews.forEach(review => {  %>
-        <li class="list-group-item"><p><strong>User: <%= review.author %></strong> </p>
-        <p>Rating: <%= review.stars %>  Stars</p>
-        <p>Comment: <%= review.comment %></p></li> 
-    <% })%>
-    <a href="/trailers/<%= trailers._id %>/reviews/new" class="btn btn-primary">Add Review</a>
-    </ul>
-</div>
+
 <% include partials/footer %>

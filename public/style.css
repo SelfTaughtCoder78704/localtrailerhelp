@@ -4,13 +4,13 @@
 body {
     margin: 0; 
     padding: 0;
-    color: white;
-    background: #30B0B8;
+
+   
     font-family: 'Montserrat', sans-serif;
 }
 
 
-.navbar {
+/* .navbar {
     background: #30B0B8 !important;
     
     
@@ -122,17 +122,9 @@ body {
 
 form .first{
     padding-left: 0;
-}
+} */
 
-.reviews{
-    background: grey;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-.reviews li {
-    color: #B83830;
-}
 
 @media screen and (max-width:768px){
     #extraInfo .fas{
