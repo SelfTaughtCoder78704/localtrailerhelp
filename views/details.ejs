@@ -9,6 +9,9 @@
                 <div class="list-group-item">Info 2</div>
                 <div class="list-group-item">Info 3</div>
             </div>
+            <div>
+                Map goes here
+            </div>
         </div>
         <div class="col-md-9">
             <div class="card">
@@ -28,10 +31,16 @@
                 
                 <div style="margin-top: 10px" class="jumbotron">
                     <a href="/trailers/<%= trailers._id %>/reviews/new" class="btn btn-success float-right">Add Review</a>
+                    <br><br>
+                    <hr>
                     <% trailers.reviews.forEach(review => {  %>
-                        <p><strong>User: <%= review.author %></strong> </p>
-                                
-                        <p>Comment: <%= review.comment %></p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="float-right">10 days ago</span>
+                                <p><strong>Username: <%= review.author %></strong> </p>
+                                <p><%= review.comment %></p>
+                            </div>
+                        </div>
                     <% })%>     
                 </div>
             </div>

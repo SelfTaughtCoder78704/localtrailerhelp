@@ -5,145 +5,38 @@ body {
     margin: 0; 
     padding: 0;
 
-   
+    background: rgb(12, 164, 202);
     font-family: 'Montserrat', sans-serif;
 }
 
-
-/* .navbar {
-    background: #30B0B8 !important;
-    
-    
+.btn-primary {
+    background: rgb(12, 164, 202);
 }
+
 .jumbotron{
-    color: #30B0B8;
-    border-radius: 0;
-}
-.col-sm-12, .col-md-4 {
-    
-    padding: 1%;
-    color: #30B0B8;
-    border-radius: 5px;
-    
-}
-
-#extraInfo{
-    margin-top: 40px;
-
-}
-
-#extraInfo .fas{
-    color: #30B0B8;
-    font-size: 8em;
-    transition: 0.6s;
-}
-
-#extraInfo .fas:hover{
-    color: #B83830; 
-   
-}
-
-#addForm {
-    width: 30%;
-    background: #B83830;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#searchBtn {
-    background: #B83830; 
-    color:white;
-}
-#searchBtn:hover{
-    background: white;
-    color: black;
-}
-
-.img-fluid{
-    border-radius: 5px;
-}
-
-.navbar-brand{
-    color: white !important;
-}
-
-.nav-link {
-    color: white !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.navbar-toggler{
-    background-color: white !important;
-}
-
-.row {
-    padding: 0;
-    margin: 0;
-    background: whitesmoke;
-    border-radius: 5px;
-}
-
-.homeDiv {
-    height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
-  
-}
-
-.btn {
-    background: #30B0B8;
-    border-radius: 5px;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.6s;
-    margin: 10px;
-    
-}
-
-.btn:hover{
-    background: #B83830; 
+    background: rgb(44, 38, 38);
     color: white;
-    border: 2px solid white;
 }
 
-#why{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-gap: 1em;
+.navbar-light .navbar-brand{
+    color: white;
 }
 
-.allTrailers img{
-    width:300px;
-    height: 200px;
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
 }
 
-form .first{
+.nav-link{
+    color: white;
+}
+
+.searchBtn{
+    background: rgb(206, 66, 66);
+    color: white;
+    outline: none;
+}
+
+.first{
     padding-left: 0;
-} */
-
-
-
-@media screen and (max-width:768px){
-    #extraInfo .fas{
-        font-size: 4em;
-        
-    }
-    #extraInfo h3{
-        font-size: 1em;
-    }
-    #extraInfo{
-        margin-top: 20px;
-    }
-    .allTrailers img{
-        width: 100%;
-       
-    }
-    #addForm {
-        width: 100%;
-        
-    }
-    
 }
