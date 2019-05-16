@@ -1,0 +1,12 @@
+<% include partials/header %>
+<h1 class="text-center">Sign Up For Your Account</h1>
+<div class="container signUpForm">
+    <form action="/register" method="POST" class="form-group">
+        <label for="">User Name</label>
+        <input class="form-control" type="text" name="username" placeholder="UserName">
+        <label for="">Password</label>
+        <input class="form-control" type="password" name="password" placeholder="PassWord">
+        <button class="searchBtn btn">Submit</button>
+    </form>
+</div>
+<% include partials/footer %>
