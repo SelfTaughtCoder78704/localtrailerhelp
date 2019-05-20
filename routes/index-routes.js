@@ -13,7 +13,11 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/register', (req, res) => {
-    User.register(new User({username: req.body.username}), req.body.password, (err, user) => {
+    User.register(new User({ 
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        username: req.body.username}), 
+        req.body.password, (err, user) => {
         if(err) {
             console.log(err)
             return res.render('register', {title: "Register"})
@@ -28,8 +32,11 @@ router.get('/login', (req, res) => {
     res.render('login', {title: "Log-In"})
 })
 
-router.post('/login', (req, res) => {
-    res.send(req.body)
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login'
+}), (req, res) => {
+   
 })
 
 module.exports = router

@@ -62,3 +62,7 @@ body {
     border-radius: 5px;
     color: white;
 }
+
+#homeTitle{
+    font-family: 'Baloo Bhai', cursive;
+}

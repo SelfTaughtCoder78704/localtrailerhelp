@@ -6,11 +6,9 @@ const passportLocalMongoose = require('passport-local-mongoose')
 const Trailer = require('./trailer-model');
 
 const userSchema = new Schema({
-    // firstName: String,
-    // lastName: String,
+    firstName: String,
+    lastName: String,
     username: String,
-    // email: String,
-    // phone: String,
     password: String,
     trailers: [
         {
